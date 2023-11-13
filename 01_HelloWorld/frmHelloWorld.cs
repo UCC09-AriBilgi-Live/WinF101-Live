@@ -13,7 +13,11 @@
             // 1.yol
             //MessageBox.Show("Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....Bugün nassýn?..");
 
-            using(frmMessage frmMessage = new frmMessage()) // þunu kullanarak...yani burada frmMessage classýný(form) kullanarak
+            // 2.yol
+            //MessageBox.Show($"Merhaba sevgili {tboxAd.Text} {tboxSoyad.Text} ... Bugün nasılsın...");
+
+            // 3.yol : ayrı bir formda göstermek
+            using (frmMessage frmMessage = new frmMessage()) // Şunu kullanarak...yani burada frmMessage formunu(yani aslında bildiğimiz class yapısı) kullanarak
             {
                 frmMessage.Text = "Mesajınız var....."; // formun title
                 frmMessage.lbelMessage.Text = "Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....Bugün nassın?.."; // Modifiers a dikkat
