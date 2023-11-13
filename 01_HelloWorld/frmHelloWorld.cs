@@ -1,6 +1,6 @@
-namespace _01_HelloWorld
+ï»¿namespace _01_HelloWorld
 {
-    // Formun arka planda çalışan kodları buraya yazılıyor.yani classın içine
+    // Formun arka planda Ã§alÃ½Ã¾an kodlarÃ½ buraya yazÃ½lÃ½yor.yani classÃ½n iÃ§ine
     public partial class frmHelloWorld : Form
     {
         public frmHelloWorld()
@@ -11,14 +11,14 @@ namespace _01_HelloWorld
         private void button1_Click(object sender, EventArgs e)
         {
             // 1.yol
-            //MessageBox.Show("Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....Bugün nassın?..");
+            //MessageBox.Show("Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....BugÃ¼n nassÃ½n?..");
 
-            using(frmMessage frmMessage = new frmMessage()) // şunu kullanarak...yani burada frmMessage classını(form) kullanarak
+            using(frmMessage frmMessage = new frmMessage()) // Ã¾unu kullanarak...yani burada frmMessage classÃ½nÃ½(form) kullanarak
             {
-                frmMessage.Text = "Mesajınız var....."; // formun title
-                frmMessage.lbelMessage.Text = "Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....Bugün nassın?.."; // Modifiers a dikkat
+                frmMessage.Text = "MesajÄ±nÄ±z var....."; // formun title
+                frmMessage.lbelMessage.Text = "Merhaba sevgili " + tboxAd.Text + " " + tboxSoyad.Text.ToUpper() + "....BugÃ¼n nassÄ±n?.."; // Modifiers a dikkat
 
-                if (frmMessage.ShowDialog() == DialogResult.OK) // gelen ekrandan OK mi/Cancel mi yapıldı acaba kontrolu
+                if (frmMessage.ShowDialog() == DialogResult.OK) // gelen ekrandan OK mi/Cancel mi yapÃ½ldÃ½ acaba kontrolu
                 {
                     tboxAd.Text = "";
                     tboxSoyad.Text = "";
