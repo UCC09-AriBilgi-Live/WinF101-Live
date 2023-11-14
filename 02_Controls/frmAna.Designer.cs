@@ -35,6 +35,8 @@
             kontrollerToolStripMenuItem = new ToolStripMenuItem();
             checkBoxToolStripMenuItem = new ToolStripMenuItem();
             checkedListBoxToolStripMenuItem = new ToolStripMenuItem();
+            comboBoxToolStripMenuItem = new ToolStripMenuItem();
+            othersToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             // 
             // kontrollerToolStripMenuItem
             // 
-            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem });
+            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem, comboBoxToolStripMenuItem, othersToolStripMenuItem });
             kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             kontrollerToolStripMenuItem.Size = new Size(71, 20);
             kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -93,6 +95,20 @@
             checkedListBoxToolStripMenuItem.Size = new Size(180, 22);
             checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
             checkedListBoxToolStripMenuItem.Click += checkedListBoxToolStripMenuItem_Click;
+            // 
+            // comboBoxToolStripMenuItem
+            // 
+            comboBoxToolStripMenuItem.Name = "comboBoxToolStripMenuItem";
+            comboBoxToolStripMenuItem.Size = new Size(180, 22);
+            comboBoxToolStripMenuItem.Text = "ComboBox";
+            comboBoxToolStripMenuItem.Click += comboBoxToolStripMenuItem_Click;
+            // 
+            // othersToolStripMenuItem
+            // 
+            othersToolStripMenuItem.Name = "othersToolStripMenuItem";
+            othersToolStripMenuItem.Size = new Size(180, 22);
+            othersToolStripMenuItem.Text = "Others";
+            othersToolStripMenuItem.Click += othersToolStripMenuItem_Click;
             // 
             // frmAna
             // 
@@ -122,5 +138,7 @@
         private ToolStripMenuItem kontrollerToolStripMenuItem;
         private ToolStripMenuItem checkBoxToolStripMenuItem;
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
+        private ToolStripMenuItem comboBoxToolStripMenuItem;
+        private ToolStripMenuItem othersToolStripMenuItem;
     }
 }

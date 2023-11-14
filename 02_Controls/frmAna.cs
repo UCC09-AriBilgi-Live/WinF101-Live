@@ -36,6 +36,18 @@ namespace _02_Controls
             frmCheckedListBox.ShowDialog();
         }
 
+        private void comboBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmComboBox frmComboBox = new frmComboBox();
 
+            frmComboBox.ShowDialog();
+        }
+
+        private void othersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOthers frmOthers = new frmOthers();
+
+            frmOthers.ShowDialog();
+        }
     }
 }
