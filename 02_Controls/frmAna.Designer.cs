@@ -34,6 +34,7 @@
             çıkışToolStripMenuItem = new ToolStripMenuItem();
             kontrollerToolStripMenuItem = new ToolStripMenuItem();
             checkBoxToolStripMenuItem = new ToolStripMenuItem();
+            checkedListBoxToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,13 +69,13 @@
             // çıkışToolStripMenuItem
             // 
             çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            çıkışToolStripMenuItem.Size = new Size(180, 22);
+            çıkışToolStripMenuItem.Size = new Size(99, 22);
             çıkışToolStripMenuItem.Text = "Çıkış";
             çıkışToolStripMenuItem.Click += çıkışToolStripMenuItem_Click;
             // 
             // kontrollerToolStripMenuItem
             // 
-            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem });
+            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem });
             kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             kontrollerToolStripMenuItem.Size = new Size(71, 20);
             kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -85,6 +86,13 @@
             checkBoxToolStripMenuItem.Size = new Size(180, 22);
             checkBoxToolStripMenuItem.Text = "CheckBox";
             checkBoxToolStripMenuItem.Click += checkBoxToolStripMenuItem_Click;
+            // 
+            // checkedListBoxToolStripMenuItem
+            // 
+            checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
+            checkedListBoxToolStripMenuItem.Size = new Size(180, 22);
+            checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
+            checkedListBoxToolStripMenuItem.Click += checkedListBoxToolStripMenuItem_Click;
             // 
             // frmAna
             // 
@@ -113,5 +121,6 @@
         private ToolStripMenuItem çıkışToolStripMenuItem;
         private ToolStripMenuItem kontrollerToolStripMenuItem;
         private ToolStripMenuItem checkBoxToolStripMenuItem;
+        private ToolStripMenuItem checkedListBoxToolStripMenuItem;
     }
 }
