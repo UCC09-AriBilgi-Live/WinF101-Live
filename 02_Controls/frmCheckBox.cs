@@ -21,5 +21,35 @@ namespace _02_Controls
         {
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCheckBox_Load(object sender, EventArgs e)
+        {
+            // Formun ekrana ilk geldiğinde mutlaka çalışan yerdir (OnLoad event)
+
+            lbelMessage.Visible = false;
+        }
+
+        private void chkbMessage_CheckedChanged(object sender, EventArgs e)
+        {
+            // checkbox ın işaretli olup/olmamasına göre burası tetiklenecek
+            if (chkbMessage.Checked == true) // ekrandaki chkb eğer seçilmişse olay true lanır
+            {
+                lbelMessage.Text = "Checkbox seçildi...";
+            lbelMessage.Visible = true;
+            }
+            else
+            {
+                lbelMessage.Visible = false;
+                //lbelMessage.Text = "Checkbox seçim kaldırıldı...";
+            }
+
+
+
+        }
     }
 }
