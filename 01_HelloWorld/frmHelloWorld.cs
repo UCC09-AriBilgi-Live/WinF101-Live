@@ -16,7 +16,7 @@
             // 2.yol
             //MessageBox.Show($"Merhaba sevgili {tboxAd.Text} {tboxSoyad.Text} ... Bugün nasılsın...");
 
-            // 3.yol : ayrı bir formda göstermek
+            // 3.yol : ayrı bir formda göstermek(bir formdan diğer formu çağırabilme)
             using (frmMessage frmMessage = new frmMessage()) // Şunu kullanarak...yani burada frmMessage formunu(yani aslında bildiğimiz class yapısı) kullanarak
             {
                 frmMessage.Text = "Mesajınız var....."; // formun title
