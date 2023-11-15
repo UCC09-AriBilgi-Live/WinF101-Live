@@ -37,6 +37,8 @@
             checkedListBoxToolStripMenuItem = new ToolStripMenuItem();
             comboBoxToolStripMenuItem = new ToolStripMenuItem();
             othersToolStripMenuItem = new ToolStripMenuItem();
+            dataTimeToolStripMenuItem = new ToolStripMenuItem();
+            timerToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             btonExit.Name = "btonExit";
             btonExit.Size = new Size(97, 43);
             btonExit.TabIndex = 0;
-            btonExit.Text = "Çıkış";
+            btonExit.Text = "Çı&kış";
             btonExit.UseVisualStyleBackColor = false;
             btonExit.Click += btonExit_Click;
             // 
@@ -77,7 +79,7 @@
             // 
             // kontrollerToolStripMenuItem
             // 
-            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem, comboBoxToolStripMenuItem, othersToolStripMenuItem });
+            kontrollerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { checkBoxToolStripMenuItem, checkedListBoxToolStripMenuItem, comboBoxToolStripMenuItem, othersToolStripMenuItem, dataTimeToolStripMenuItem, timerToolStripMenuItem });
             kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             kontrollerToolStripMenuItem.Size = new Size(71, 20);
             kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -110,6 +112,20 @@
             othersToolStripMenuItem.Text = "Others";
             othersToolStripMenuItem.Click += othersToolStripMenuItem_Click;
             // 
+            // dataTimeToolStripMenuItem
+            // 
+            dataTimeToolStripMenuItem.Name = "dataTimeToolStripMenuItem";
+            dataTimeToolStripMenuItem.Size = new Size(180, 22);
+            dataTimeToolStripMenuItem.Text = "DateTime";
+            dataTimeToolStripMenuItem.Click += dataTimeToolStripMenuItem_Click;
+            // 
+            // timerToolStripMenuItem
+            // 
+            timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            timerToolStripMenuItem.Size = new Size(180, 22);
+            timerToolStripMenuItem.Text = "Timer";
+            timerToolStripMenuItem.Click += timerToolStripMenuItem_Click;
+            // 
             // frmAna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -140,5 +156,7 @@
         private ToolStripMenuItem checkedListBoxToolStripMenuItem;
         private ToolStripMenuItem comboBoxToolStripMenuItem;
         private ToolStripMenuItem othersToolStripMenuItem;
+        private ToolStripMenuItem dataTimeToolStripMenuItem;
+        private ToolStripMenuItem timerToolStripMenuItem;
     }
 }

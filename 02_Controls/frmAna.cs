@@ -49,5 +49,19 @@ namespace _02_Controls
 
             frmOthers.ShowDialog();
         }
+
+        private void dataTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDateTime frmDateTime = new frmDateTime();
+
+            frmDateTime.ShowDialog();
+        }
+
+        private void timerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTimer frmTimer = new frmTimer();
+
+            frmTimer.ShowDialog();
+        }
     }
 }
