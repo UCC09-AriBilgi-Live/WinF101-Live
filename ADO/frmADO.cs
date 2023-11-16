@@ -15,12 +15,8 @@ namespace ADO
     {
         // Tüm uygulama dahilinde geçerli olması için değişgenlerimi burada yaratıyorum
         //string vs_ConnStr = @"Data Source=BILCE;Initial Catalog=Northwind;TrustServerCertificate=True;Persist Security Info=False;Encrypt=False;"; // Connection String : veritabanına bağlanma için
-        string vs_ConnStr = @"Server = 94.73.144.17 ; Database = u7173324_NWind; user id=u7173324_NWind;password=Na79=YX2az@Co7-_; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
+        string vs_ConnStr = "Server = 94.73.144.17 ; Database = u7173324_NWind; user id=u7173324_NWind;password=Na79=YX2az@Co7-_; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
         string vs_SQLCommand; // SQL Command : SQL tarafın çalışacak SQL Komutları
-
-
-
-
 
         public frmADO()
         {
@@ -42,10 +38,43 @@ namespace ADO
         {
             // Ekrandaki datagrid i ayarlar...
 
-            dgrdCustomers.AutoGenerateColumns = true;
+            // Set AutoGenerateColumns --> false
+            dgrdCustomers.AutoGenerateColumns = false;
 
-            dgrdCustomers.AllowUserToAddRows = true;
+            // Set AllowUser..false...ekrandan grid üzerinden kayıt ekleme yapmasın...benim butonuma mahkum olsun. 
+            dgrdCustomers.AllowUserToAddRows = false;
+            dgrdCustomers.AllowUserToDeleteRows = false;
 
+            // Set AutoSizeColumnsMode --> Fill -- colonların genişlikleriyle ilgili
+            dgrdCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgrdCustomers.RowHeadersVisible = false;
+
+            dgrdCustomers.AllowUserToResizeRows = false;
+
+            dgrdCustomers.ReadOnly = true;
+
+            dgrdCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgrdCustomers.ColumnCount = 4;
+
+            // Add columns
+
+            dgrdCustomers.Columns[0].Name = "CustomerID";
+            dgrdCustomers.Columns[0].HeaderText = "Customer ID";
+            dgrdCustomers.Columns[0].DataPropertyName = "CustomerID";
+
+            dgrdCustomers.Columns[1].Name = "CompanyName";
+            dgrdCustomers.Columns[1].HeaderText = "Company Name";
+            dgrdCustomers.Columns[1].DataPropertyName = "CompanyName";
+
+            dgrdCustomers.Columns[2].Name = "ContactName";
+            dgrdCustomers.Columns[2].HeaderText = "Contact Name";
+            dgrdCustomers.Columns[2].DataPropertyName = "ContactName";
+
+            dgrdCustomers.Columns[3].Name = "Country";
+            dgrdCustomers.Columns[3].HeaderText = "Country";
+            dgrdCustomers.Columns[3].DataPropertyName = "Country";
         }
 
         private void BindGrid()
