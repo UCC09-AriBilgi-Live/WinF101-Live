@@ -15,6 +15,7 @@ namespace ADO
     {
         // Tüm uygulama dahilinde geçerli olması için değişgenlerimi burada yaratıyorum
         //string vs_ConnStr = @"Data Source=BILCE;Initial Catalog=Northwind;TrustServerCertificate=True;Persist Security Info=False;Encrypt=False;"; // Connection String : veritabanına bağlanma için
+        string vs_ConnStr = @"Server = 94.73.144.17 ; Database = u7173324_NWind; user id=u7173324_NWind;password=Na79=YX2az@Co7-_; Trusted_Connection = False;Encrypt=false;"; // Connection String : veritabanına bağlanma için
         string vs_SQLCommand; // SQL Command : SQL tarafın çalışacak SQL Komutları
 
 
@@ -33,7 +34,7 @@ namespace ADO
 
         private void frmADO_Load(object sender, EventArgs e)
         {
-            //PrepareGrid();
+            PrepareGrid();
             BindGrid(); // dg yi doldursun
         }
 
@@ -53,12 +54,11 @@ namespace ADO
 
             //using (SqlConnection connection = new SqlConnection(@"Data Source=BILCE\\ARIBILGI;Initial Catalog=Northwind;TrustServerCertificate=True;Persist Security Info=True;Encrypt=False;"))
 
+            vs_SQLCommand = "SELECT * FROM Customers";
 
-            using (SqlConnection connection = new SqlConnection(@"Server = petdurak.duckdns.org,1433 ; Database = Northwind; user id=sa;password=wv2l5ct7m22056; Trusted_Connection = False;Encrypt=false;"))
-
-                
+            using (SqlConnection connection = new SqlConnection(vs_ConnStr))
             {
-                using (SqlCommand command = new SqlCommand("SELECT * FROM Customers", connection))
+                using (SqlCommand command = new SqlCommand(vs_SQLCommand, connection))
                 {
                     command.CommandType = CommandType.Text;
 
