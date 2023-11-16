@@ -18,3 +18,6 @@ Products formunda
 	Price 
 	UnitInStock bilgisi olabilir (numericUpDown bileşeni kullanılabilir)
 	Discounted bilgisi olabilir (bunun içinde bir checkbox bileşeni kullanılabilir)
+
+
+(!) System.Configuration.ConfigurationManager paketi....

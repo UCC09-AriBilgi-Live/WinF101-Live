@@ -16,5 +16,10 @@ namespace 03_ADO
     {
         InitializeComponent();
     }
+
+    private void menü1ToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
 }
 }

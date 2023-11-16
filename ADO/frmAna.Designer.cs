@@ -29,15 +29,25 @@
     private void InitializeComponent()
     {
         menuStrip1 = new MenuStrip();
+        menü1ToolStripMenuItem = new ToolStripMenuItem();
+        menuStrip1.SuspendLayout();
         SuspendLayout();
         // 
         // menuStrip1
         // 
+        menuStrip1.Items.AddRange(new ToolStripItem[] { menü1ToolStripMenuItem });
         menuStrip1.Location = new Point(0, 0);
         menuStrip1.Name = "menuStrip1";
         menuStrip1.Size = new Size(800, 24);
         menuStrip1.TabIndex = 0;
         menuStrip1.Text = "menuStrip1";
+        // 
+        // menü1ToolStripMenuItem
+        // 
+        menü1ToolStripMenuItem.Name = "menü1ToolStripMenuItem";
+        menü1ToolStripMenuItem.Size = new Size(56, 20);
+        menü1ToolStripMenuItem.Text = "Menü1";
+        menü1ToolStripMenuItem.Click += menü1ToolStripMenuItem_Click;
         // 
         // frmAna
         // 
@@ -48,6 +58,8 @@
         MainMenuStrip = menuStrip1;
         Name = "frmAna";
         Text = "frmAna";
+        menuStrip1.ResumeLayout(false);
+        menuStrip1.PerformLayout();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -55,5 +67,6 @@
     #endregion
 
     private MenuStrip menuStrip1;
+    private ToolStripMenuItem menü1ToolStripMenuItem;
 }
 }
