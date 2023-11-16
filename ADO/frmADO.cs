@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ADO
+namespace _03_ADO
 {
     public partial class frmADO : Form
     {
@@ -104,6 +104,48 @@ namespace ADO
                 }
 
             }
+        }
+
+        private void btonAdd_Click(object sender, EventArgs e)
+        {
+            ShowData("I"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
+            BindGrid();
+
+        }
+
+        private void ShowData(string prmMode)
+        {
+            frmADO_Detail frmADO_Detail = new frmADO_Detail();
+
+            frmADO_Detail.Mod = prmMode;
+
+            // IUD durumuna göre ekran komponent ayarları yapılıyor
+
+            switch (prmMode)
+            {
+                case "I": // Insert Modu için
+                    frmADO_Detail.tboxCustomerID.Enabled = true;
+                    frmADO_Detail.tboxCustomerID.Text = "";
+                    frmADO_Detail.tboxCompanyName.Text = "";
+                    frmADO_Detail.tboxContactName.Text = "";
+                    frmADO_Detail.tboxCountry.Text = "";
+
+                    break;
+
+                case "U": // Update Modu için
+                    frmADO_Detail.tboxCustomerID.Enabled = false;
+                    frmADO_Detail.tboxCustomerID.Text = dgrdCustomers.CurrentRow.Cells[0].Value.ToString();
+                    frmADO_Detail.tboxCompanyName.Text = dgrdCustomers.CurrentRow.Cells[1].Value.ToString();
+                    frmADO_Detail.tboxContactName.Text = dgrdCustomers.CurrentRow.Cells[2].Value.ToString();
+                    frmADO_Detail.tboxCountry.Text = dgrdCustomers.CurrentRow.Cells[3].Value.ToString();
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            frmADO_Detail.ShowDialog();
         }
     }
 }

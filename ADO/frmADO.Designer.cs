@@ -1,4 +1,4 @@
-﻿namespace ADO
+﻿namespace _03_ADO
 {
     partial class frmADO
     {
@@ -73,6 +73,7 @@
             btonAdd.TabIndex = 3;
             btonAdd.Text = "Ekle";
             btonAdd.UseVisualStyleBackColor = true;
+            btonAdd.Click += btonAdd_Click;
             // 
             // btonUpdate
             // 

@@ -1,4 +1,4 @@
-namespace ADO
+namespace _03_ADO
 {
     internal static class Program
     {
