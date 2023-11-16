@@ -1,1 +1,20 @@
-﻿
+﻿-- Şu an ekrana ilk olarak frmADO formu geliyor.Bunun içinde Customer ları görüyorum
+
+-- Ana bir ekran olsun. Bir menü olsun...Bu menüden tıklama ile ilgili forma gidilsin
+
+-- Products tablosunu getiren ayrı ayrı form olsun ve bunlara erişim ana form üzerine konan menu ile olsun...
+
+Detaylar;
+
+Products formunda
+1. Bir TabbedControl olsun
+2. 1.Tab içersinde bazı sorgulama seçenekleri olabilir. Yani Ürünün adını kategorisini tedarikçisini sorgulayabileceğim seçenekler olabilir.bir buton yardıyla sorgulama sonucu bir dg de gösterilebilir. Eğer hiçbir sorgu parametresi verilmez tüm data dg içinde gösterilebilir.
+3. Bu sorgulama sonucunda gelen kayıt seti üzerinde CRUD(Create,Read,Update,Delete) işlemleri yapacak butonlar olabilir.
+4. 2.bir Tab olsun.Bu da 1.Tab deki gelen kayıtların ilgili butona (ekle,düzenle,sil) basılması sonucu bu bilgiler 2.tab üzerine git(yani buradaki 2.tab aslında 2.form gibi çalışıyor)
+5. Yani 2.tab de olacak bilgiler şunlar olabilir;
+	ProductName
+	Category(bunun için combobox bileşenini kullanabilir)
+	Supplier (bunun için combobox bileşenini kullanabilir)
+	Price 
+	UnitInStock bilgisi olabilir (numericUpDown bileşeni kullanılabilir)
+	Discounted bilgisi olabilir (bunun içinde bir checkbox bileşeni kullanılabilir)

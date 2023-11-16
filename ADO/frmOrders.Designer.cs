@@ -1,6 +1,6 @@
 ﻿namespace 03_ADO
 {
-    partial class frmAna
+    partial class frmOrders
 {
     /// <summary>
     /// Required designer variable.
@@ -28,32 +28,12 @@
     /// </summary>
     private void InitializeComponent()
     {
-        menuStrip1 = new MenuStrip();
-        SuspendLayout();
-        // 
-        // menuStrip1
-        // 
-        menuStrip1.Location = new Point(0, 0);
-        menuStrip1.Name = "menuStrip1";
-        menuStrip1.Size = new Size(800, 24);
-        menuStrip1.TabIndex = 0;
-        menuStrip1.Text = "menuStrip1";
-        // 
-        // frmAna
-        // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
-        AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(800, 450);
-        Controls.Add(menuStrip1);
-        MainMenuStrip = menuStrip1;
-        Name = "frmAna";
-        Text = "frmAna";
-        ResumeLayout(false);
-        PerformLayout();
+        this.components = new System.ComponentModel.Container();
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.ClientSize = new System.Drawing.Size(800, 450);
+        this.Text = "frmOrders";
     }
 
     #endregion
-
-    private MenuStrip menuStrip1;
 }
 }
