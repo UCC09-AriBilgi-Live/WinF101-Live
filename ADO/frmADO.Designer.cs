@@ -64,6 +64,7 @@
             dgrdCustomers.RowTemplate.Height = 25;
             dgrdCustomers.Size = new Size(755, 326);
             dgrdCustomers.TabIndex = 2;
+            dgrdCustomers.CellContentDoubleClick += dgrdCustomers_CellContentDoubleClick;
             // 
             // btonAdd
             // 
@@ -83,6 +84,7 @@
             btonUpdate.TabIndex = 4;
             btonUpdate.Text = "Güncelle";
             btonUpdate.UseVisualStyleBackColor = true;
+            btonUpdate.Click += btonUpdate_Click;
             // 
             // btonDelete
             // 

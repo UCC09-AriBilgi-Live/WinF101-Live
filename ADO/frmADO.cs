@@ -106,12 +106,6 @@ namespace _03_ADO
             }
         }
 
-        private void btonAdd_Click(object sender, EventArgs e)
-        {
-            ShowData("I"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
-            BindGrid();
-
-        }
 
         private void ShowData(string prmMode)
         {
@@ -134,6 +128,7 @@ namespace _03_ADO
 
                 case "U": // Update Modu için
                     frmADO_Detail.tboxCustomerID.Enabled = false;
+                    // dg üzerindeki ilgili alanlardaki veriler detay formunun ilgili yerlerine yerleştiriliyor
                     frmADO_Detail.tboxCustomerID.Text = dgrdCustomers.CurrentRow.Cells[0].Value.ToString();
                     frmADO_Detail.tboxCompanyName.Text = dgrdCustomers.CurrentRow.Cells[1].Value.ToString();
                     frmADO_Detail.tboxContactName.Text = dgrdCustomers.CurrentRow.Cells[2].Value.ToString();
@@ -146,6 +141,29 @@ namespace _03_ADO
             }
 
             frmADO_Detail.ShowDialog();
+        }
+
+
+        private void btonAdd_Click(object sender, EventArgs e)
+        {
+            ShowData("I"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
+            BindGrid();
+
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+            ShowData("U"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
+            BindGrid();
+
+
+        }
+
+        private void dgrdCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // dg üzerinde herhangi bir satırda çift tıklama ile forma gitme...
+            ShowData("U"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
+            BindGrid();
         }
     }
 }
