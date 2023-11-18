@@ -1,4 +1,4 @@
-﻿namespace 03_ADO
+﻿namespace _03_ADO
 {
     partial class frmProducts
 {
