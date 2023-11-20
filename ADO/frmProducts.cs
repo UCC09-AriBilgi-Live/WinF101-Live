@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 03_ADO
+namespace _03_ADO
 {
     public partial class frmProducts : Form
 {

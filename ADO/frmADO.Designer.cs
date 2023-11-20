@@ -94,6 +94,7 @@
             btonDelete.TabIndex = 5;
             btonDelete.Text = "Sil";
             btonDelete.UseVisualStyleBackColor = true;
+            btonDelete.Click += btonDelete_Click;
             // 
             // frmADO
             // 

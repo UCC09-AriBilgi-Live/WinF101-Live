@@ -165,5 +165,53 @@ namespace _03_ADO
             ShowData("U"); // 3 ayrı işlemi (I,U,D) tek metotda birleştiren benim yazdığım metot
             BindGrid();
         }
+
+        private void btonDelete_Click(object sender, EventArgs e)
+        {
+            // Önce kullanıcıdan gerçekten veriyi silmek isteyip istemediğini soralım...
+
+            // Bunun için bildiğimiz MessageBox yöntemini kullanacağız
+
+            // MessageBoxdan geri gelen bir değer oluyor. Bu değeri okumak lazım.Ona göre ne yapacağımızı kestireceğiz
+
+            DialogResult dialogResult = MessageBox.Show("Veriyi gerçekten silmek istiyor musunuz?","Onay",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (SqlConnection connection = new SqlConnection(vs_ConnStr))
+                {
+                    vs_SQLCommand = "DELETE FROM Customers WHERE CustomerID='"+ dgrdCustomers.CurrentRow.Cells[0].Value.ToString() + "'";
+
+
+                    using (SqlCommand command = new SqlCommand(vs_SQLCommand, connection))
+                    {
+                        command.CommandType = CommandType.Text;
+
+                        try
+                        {
+                            connection.Open(); // db ye bir bağlanmayı dene...
+
+                            command.ExecuteNonQuery(); // sql cümlesini çalıştırdı
+
+                            // eğer burada herhangi bir sorun yaşamadıysan...işlem başarılıdır. Mesajını ver.
+                            MessageBox.Show("Bilgileriniz VT den başarıyla silindi...");
+
+                            BindGrid();
+
+                        }
+                        catch (Exception message)
+                        {
+                            MessageBox.Show("Hata : " + message.ToString());
+
+                            
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
     }
 }

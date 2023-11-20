@@ -11,7 +11,7 @@ namespace _03_ADO
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmADO());
+            Application.Run(new frmAna()); // Uygulamaya ilk giriþ ekranýný belirliyorum...
         }
     }
 }
